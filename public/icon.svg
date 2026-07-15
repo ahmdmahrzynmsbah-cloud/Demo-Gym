@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Premium Solid Dark Background -->
+  <rect width="512" height="512" rx="128" fill="#111315" />
+
+  <!-- 
+    PERFECTLY SYMMETRICAL, MINIMALIST ATHLETIC EMBLEM (DUMBBELL)
+    Designed with thick, flat, geometric vector shapes for a timeless, high-end look.
+  -->
+  <g id="brand-mark" transform="translate(0, -10)">
+    <!-- Main Solid Grip Bar -->
+    <rect x="180" y="206" width="152" height="28" rx="4" fill="#FFFFFF" />
+
+    <!-- Inner High-Contrast Collars -->
+    <rect x="160" y="190" width="14" height="60" rx="3" fill="#D8FF00" />
+    <rect x="338" y="190" width="14" height="60" rx="3" fill="#D8FF00" />
+
+    <!-- Solid Inner Weight Plates -->
+    <rect x="116" y="166" width="36" height="108" rx="8" fill="#FFFFFF" />
+    <rect x="360" y="166" width="36" height="108" rx="8" fill="#FFFFFF" />
+
+    <!-- Solid Outer Weight Plates -->
+    <rect x="76" y="182" width="32" height="76" rx="6" fill="#D8FF00" />
+    <rect x="404" y="182" width="32" height="76" rx="6" fill="#D8FF00" />
+
+    <!-- Dynamic Premium Core Cutout (Adds a level of custom precision branding) -->
+    <!-- A clean, flat horizontal bar running through the center of the weight plates to create negative space -->
+    <rect x="60" y="214" width="104" height="12" fill="#111315" />
+    <rect x="348" y="214" width="104" height="12" fill="#111315" />
+  </g>
+
+  <!-- 
+    PREMIUM GEOMETRIC TYPOGRAPHY
+    Perfect spacing, alignment, and modern bold aesthetic.
+  -->
+  <text x="256" y="394" 
+        font-family="system-ui, -apple-system, 'SF Pro Display', Montserrat, sans-serif" 
+        font-weight="900" 
+        font-size="46" 
+        letter-spacing="6" 
+        fill="#FFFFFF" 
+        text-anchor="middle">DEMO GYM</text>
+
+  <text x="256" y="432" 
+        font-family="system-ui, -apple-system, 'SF Pro Display', Montserrat, sans-serif" 
+        font-weight="800" 
+        font-size="14" 
+        letter-spacing="12" 
+        fill="#D8FF00" 
+        text-anchor="middle">PREMIUM SYSTEM</text>
+</svg>

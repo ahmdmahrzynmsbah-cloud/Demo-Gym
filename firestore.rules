@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /gym_members/{id} {
+      allow read, write: if true;
+    }
+    match /gym_trainers/{id} {
+      allow read, write: if true;
+    }
+    match /gym_attendance/{id} {
+      allow read, write: if true;
+    }
+    match /gym_schedules/{id} {
+      allow read, write: if true;
+    }
+    match /gym_products/{id} {
+      allow read, write: if true;
+    }
+    match /gym_sales/{id} {
+      allow read, write: if true;
+    }
+    match /gym_equipment/{id} {
+      allow read, write: if true;
+    }
+    match /gym_settings/{id} {
+      allow read, write: if true;
+    }
+    match /gym_logs/{id} {
+      allow read, write: if true;
+    }
+    match /gym_notifications/{id} {
+      allow read, write: if true;
+    }
+    match /gym_sessions/{id} {
+      allow read, write: if true;
+    }
+  }
+}

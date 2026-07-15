@@ -1,0 +1,8 @@
+{
+  "name": "Demo Gym",
+  "description": "A premium bilingual (Arabic/English) Gym Management System with role-based access, attendance sheets, schedule isolation, membership reports, and sales analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

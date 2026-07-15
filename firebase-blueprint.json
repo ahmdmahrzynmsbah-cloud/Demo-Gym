@@ -1,0 +1,184 @@
+{
+  "entities": {
+    "Member": {
+      "title": "Member",
+      "description": "Gym member details and tracking history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" },
+        "gender": { "type": "string", "enum": ["male", "female"] },
+        "subscriptionType": { "type": "string", "enum": ["monthly", "3-months", "6-months", "1-year"] },
+        "subscriptionPrice": { "type": "number" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "registrationDate": { "type": "string" }
+      },
+      "required": ["id", "fullName", "phone", "gender", "subscriptionType", "startDate", "endDate", "isActive"]
+    },
+    "Trainer": {
+      "title": "Trainer",
+      "description": "Trainer details and shifts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "gender": { "type": "string", "enum": ["male", "female"] },
+        "shiftStart": { "type": "string" },
+        "shiftEnd": { "type": "string" },
+        "targetShiftStartMinutes": { "type": "number" },
+        "salary": { "type": "number" },
+        "salaryPaid": { "type": "boolean" }
+      },
+      "required": ["id", "name", "gender", "shiftStart", "shiftEnd"]
+    },
+    "AttendanceRecord": {
+      "title": "AttendanceRecord",
+      "description": "Attendance record of a member or trainer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "targetId": { "type": "string" },
+        "targetType": { "type": "string", "enum": ["member", "trainer"] },
+        "targetName": { "type": "string" },
+        "date": { "type": "string" },
+        "checkInTime": { "type": "string" },
+        "checkOutTime": { "type": "string" },
+        "genderSection": { "type": "string" },
+        "isLate": { "type": "boolean" },
+        "lateMinutes": { "type": "number" }
+      },
+      "required": ["id", "targetId", "targetType", "targetName", "date", "checkInTime"]
+    },
+    "ShiftSchedule": {
+      "title": "ShiftSchedule",
+      "description": "Gym slot or class schedules",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "id_schedule": { "type": "string" },
+        "genderSection": { "type": "string", "enum": ["male", "female"] },
+        "dayOfWeek": { "type": "number" },
+        "className": { "type": "string" },
+        "fromTime": { "type": "string" },
+        "toTime": { "type": "string" },
+        "maxCapacity": { "type": "number" }
+      },
+      "required": ["id", "genderSection", "dayOfWeek", "className", "fromTime", "toTime", "maxCapacity"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Store inventory products",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "nameAr": { "type": "string" },
+        "category": { "type": "string" },
+        "stockQty": { "type": "number" },
+        "costPrice": { "type": "number" },
+        "retailPrice": { "type": "number" },
+        "thresholdQty": { "type": "number" }
+      },
+      "required": ["id", "nameEn", "nameAr", "category", "stockQty", "costPrice", "retailPrice", "thresholdQty"]
+    },
+    "Sale": {
+      "title": "Sale",
+      "description": "POS sales details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "productId": { "type": "string" },
+        "productName": { "type": "string" },
+        "qty": { "type": "number" },
+        "totalCostPrice": { "type": "number" },
+        "totalRetailPrice": { "type": "number" },
+        "profit": { "type": "number" },
+        "date": { "type": "string" },
+        "soldBy": { "type": "string" },
+        "genderSection": { "type": "string" }
+      },
+      "required": ["id", "productId", "productName", "qty", "totalCostPrice", "totalRetailPrice", "profit", "date", "soldBy", "genderSection"]
+    },
+    "Equipment": {
+      "title": "Equipment",
+      "description": "Gym machinery and components",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "purchaseDate": { "type": "string" },
+        "lastMaintenanceDate": { "type": "string" },
+        "status": { "type": "string", "enum": ["Operational", "Under Repair", "Out of Service"] },
+        "repairCost": { "type": "number" }
+      },
+      "required": ["id", "name", "purchaseDate", "lastMaintenanceDate", "status", "repairCost"]
+    },
+    "GymSettings": {
+      "title": "GymSettings",
+      "description": "Core custom configurations and passcodes",
+      "type": "object",
+      "properties": {
+        "appName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "adminPasscode": { "type": "string" },
+        "maleTrainerPasscode: " : { "type": "string" },
+        "femaleTrainerPasscode": { "type": "string" }
+      },
+      "required": ["appName", "tagline", "adminPasscode", "maleTrainerPasscode", "femaleTrainerPasscode"]
+    },
+    "ActivityLog": {
+      "title": "ActivityLog",
+      "description": "Audit trails and system event ledger",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "actionAr": { "type": "string" },
+        "actionEn": { "type": "string" },
+        "category": { "type": "string" }
+      },
+      "required": ["id", "timestamp", "actionAr", "actionEn", "category"]
+    }
+  },
+  "firestore": {
+    "gym_members": {
+      "schema": "Member",
+      "description": "Synced global gym members"
+    },
+    "gym_trainers": {
+      "schema": "Trainer",
+      "description": "Synced global personal trainers"
+    },
+    "gym_attendance": {
+      "schema": "AttendanceRecord",
+      "description": "Synced dynamic attendance log sheets"
+    },
+    "gym_schedules": {
+      "schema": "ShiftSchedule",
+      "description": "Synced gym class slots schedules"
+    },
+    "gym_products": {
+      "schema": "Product",
+      "description": "Synced items inventory store"
+    },
+    "gym_sales": {
+      "schema": "Sale",
+      "description": "Synced POS retail sales orders"
+    },
+    "gym_equipment": {
+      "schema": "Equipment",
+      "description": "Synced heavy-duty machineries registry"
+    },
+    "gym_settings": {
+      "schema": "GymSettings",
+      "description": "Bespoke centralized system settings"
+    },
+    "gym_logs": {
+      "schema": "ActivityLog",
+      "description": "Universal activity audit trail history"
+    }
+  }
+}

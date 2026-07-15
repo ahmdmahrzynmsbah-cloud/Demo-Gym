@@ -1,0 +1,553 @@
+@import "tailwindcss";
+
+/* 
+  PROFESSIONAL DEMO GYM ATHLETIC DARK THEME
+  Perfect high-contrast dark palette that respects the original structure,
+  using deep charcoal, slate gray, and pure high-energy lime accents.
+*/
+@theme {
+  --font-sans: "Cairo", "Tajawal", "Inter", sans-serif;
+  --font-mono: "Cairo", "Tajawal", "Inter", sans-serif;
+  --color-primary: #C4D600;         /* Pure High-Energy Lime Green */
+  --color-dark-charcoal: #212930;   /* Original Dark Main layout background */
+  --color-slate-gray: #2D3740;      /* Premium Graphite Card background */
+  --color-muted-teal: #8A9CA8;      /* Readable slate-blue helper labels */
+  --color-light-gray: #F1F5F9;      /* Crystal clear text display */
+}
+
+/* Global font-mono Class override to force professional Cairo font */
+.font-mono {
+  font-family: "Cairo", "Tajawal", "Inter", sans-serif !important;
+}
+
+/* Global Reset on Body */
+body {
+  background-color: #212930 !important;
+  color: #F1F5F9 !important;
+  font-family: "Cairo", "Tajawal", "Inter", sans-serif;
+}
+
+/* Page content wrapper background */
+.bg-dark-charcoal {
+  background-color: #212930 !important;
+  color: #F1F5F9 !important;
+}
+
+/* Card components styling (Elegant Graphite containers with glowing subtle boundaries) */
+.bg-slate-gray\/15 { 
+  background-color: rgba(45, 55, 64, 0.45) !important; 
+}
+.bg-slate-gray\/25, 
+.bg-slate-gray\/30, 
+.bg-slate-gray\/35, 
+.bg-slate-gray\/45 {
+  background-color: #2D3740 !important;
+  border: 1px solid rgba(138, 156, 168, 0.25) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Ensure absolute premium contrast for primary text */
+.text-white {
+  color: #FFFFFF !important;
+}
+
+/* Vibrant lime green branding colors */
+.text-primary, 
+.text-\[\#C4D600\],
+.text-\[\#8CA000\] {
+  color: #C4D600 !important;
+}
+
+/* Descriptive labels */
+.text-muted-teal {
+  color: #A3B5C0 !important;
+}
+
+/* Buttons style config */
+.bg-primary,
+.bg-\[\#C4D600\],
+.bg-\[\#8CA000\] {
+  background-color: #C4D600 !important;
+  color: #12181C !important;
+}
+.bg-primary:hover,
+.bg-\[\#C4D600\]:hover {
+  background-color: #E2F518 !important;
+}
+
+.bg-slate-gray {
+  background-color: #3B4854 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(138, 156, 168, 0.2) !important;
+}
+.bg-slate-gray:hover {
+  background-color: #495866 !important;
+}
+
+/* Dark transparent layouts for charts, inputs, and form sections */
+.bg-black\/45, 
+.bg-black\/40, 
+.bg-black\/35, 
+.bg-black\/25, 
+.bg-black\/20, 
+.bg-black\/15, 
+.bg-black\/10 {
+  background-color: rgba(14, 18, 22, 0.55) !important;
+  border-color: rgba(138, 156, 168, 0.2) !important;
+  color: #F1F5F9 !important;
+}
+
+/* Make sure all form controls look magnificent with professional Cairo font and weight */
+input, select, textarea {
+  font-family: "Cairo", "Tajawal", "Inter", sans-serif !important;
+  font-weight: 600 !important; /* Extremely high readability and premium professional feel */
+  background-color: #192026 !important;
+  border: 1px solid rgba(138, 156, 168, 0.35) !important;
+  color: #FFFFFF !important;
+  border-radius: 0.875rem !important; /* Slightly rounder */
+  padding: 0.85rem 1.1rem !important; /* Generous comfortable padding */
+  font-size: 0.95rem !important; /* Readable professional size, perfect for Cairo scale */
+  line-height: 1.4 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Force Cairo font inside inputs/selects/textareas even if styled with .font-mono class in templates */
+input.font-mono, 
+select.font-mono, 
+textarea.font-mono,
+input[type="date"],
+input[type="time"] {
+  font-family: "Cairo", "Tajawal", "Inter", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #C4D600 !important;
+  box-shadow: 0 0 0 3px rgba(196, 214, 0, 0.25) !important;
+}
+input::placeholder, textarea::placeholder {
+  font-family: "Cairo", "Tajawal", "Inter", sans-serif !important;
+  font-weight: 500 !important;
+  color: #6C7E8B !important;
+}
+
+/* Beautiful high-end tables */
+thead {
+  background-color: #1A2228 !important;
+  border-bottom: 2px solid rgba(138, 156, 168, 0.3) !important;
+}
+thead th {
+  color: #E2E8F0 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+tbody tr {
+  border-bottom: 1px solid rgba(138, 156, 168, 0.1) !important;
+  background-color: #2D3740 !important;
+}
+tbody tr:hover {
+  background-color: #35414B !important;
+}
+
+/* Sidebar layout - solid deep dark-slate color structure */
+sidebar {
+  background-color: #171E24 !important;
+  border-right: 1px solid rgba(138, 156, 168, 0.15) !important;
+  border-left: 1px solid rgba(138, 156, 168, 0.15) !important;
+}
+sidebar h3 {
+  color: #FFFFFF !important;
+}
+sidebar button {
+  color: #A3B5C0 !important;
+  transition: all 0.2s ease !important;
+}
+sidebar button:hover {
+  background-color: rgba(196, 214, 0, 0.08) !important;
+  color: #C4D600 !important;
+}
+sidebar button.bg-primary {
+  background-color: #C4D600 !important;
+  color: #12181C !important;
+}
+sidebar button.bg-primary * {
+  color: #12181C !important;
+}
+
+/* Overlay Glass for Popups and Modals */
+.fixed.inset-0.bg-black\/85, 
+.fixed.inset-0.bg-black\/80 {
+  background-color: rgba(10, 14, 18, 0.85) !important;
+  backdrop-filter: blur(5px);
+}
+/* Modal Inner boxes */
+.fixed .bg-dark-charcoal,
+.fixed .bg-slate-[950],
+.fixed .bg-slate-gray\/30 {
+  background-color: #2D3740 !important;
+  border: 1px solid rgba(138, 156, 168, 0.35) !important;
+  color: #F1F5F9 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Custom chart dynamic grids */
+svg line {
+  stroke: rgba(138, 156, 168, 0.2) !important;
+  stroke-opacity: 0.5 !important;
+}
+svg text {
+  fill: #A3B5C0 !important;
+}
+
+/* Refined custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #212930;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B4854;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4D600;
+}
+
+/* 
+  =========================================
+  ULTRA-PREMIUM HIGH-CONTRAST SYSTEM PRINTING ENGINE
+  =========================================
+*/
+@page {
+  size: auto;
+  margin: 0.8cm !important; /* Elegant margin to fit all sheet elements perfectly without browser header/footer leaks */
+}
+
+@media print {
+  @page {
+    margin: 0.8cm !important;
+  }
+
+  /* Force background colors and exact color ratios across engines */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Keep the colorful brand logo from grayscale overrides */
+  .print-logo-img,
+  .print-logo-img *,
+  .print-logo-img svg,
+  .print-logo-img svg *,
+  .print-logo-img img {
+    color: initial !important;
+    fill: initial !important;
+    stroke: initial !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Completely hide standard non-printable chrome elements, sidebars, headers, and navigation widgets */
+  .no-print,
+  #btn-print-master-reports,
+  #btn-print-report,
+  #btn-close-report,
+  #btn-close-tr-rep,
+  sidebar,
+  button,
+  nav,
+  header,
+  footer,
+  .fixed.inset-0.bg-black\/80::before,
+  .fixed.inset-0.bg-black\/95::before {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Force all ancestor DOM containers to collapse in dimensions and background colors to avoid extra blank pages */
+  html, 
+  body, 
+  #root, 
+  #root > div, 
+  #root > div > div, 
+  #root > div > div > div,
+  #root > div > div > div > div,
+  main, 
+  main > div,
+  main > div > div,
+  .space-y-6 {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+  }
+
+  /* Force top body parameters to establish custom padding and elegant tone matching the high-contrast gym theme */
+  body {
+    padding: 0.8cm !important;
+    background-color: #192026 !important; /* Solid sleek modern dark background of gym */
+  }
+
+  /* Make all dialog overlay wrappers behave like transparent standard inline elements */
+  div.fixed.inset-0,
+  div.fixed.inset-0.bg-black\/80,
+  div.fixed.inset-0.bg-black\/95 {
+    position: static !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  /* Expand modal dialogues inner cards to standard sheets dimensions */
+  div.relative.bg-dark-charcoal,
+  .fixed .bg-dark-charcoal,
+  div.fixed .bg-dark-charcoal {
+    background: #192026 !important;
+    background-color: #192026 !important;
+    position: static !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Precise Gym branding layout sheet borders and ribbons */
+  #master-gym-printable-report,
+  #trainer-printable-report,
+  #member-printable-report-card,
+  .printable-content {
+    background: #192026 !important;
+    background-color: #192026 !important;
+    border-top: 15px solid #C4D600 !important; /* Heavy neon lime top ribbon */
+    border-left: 2px solid rgba(138, 156, 168, 0.25) !important;
+    border-right: 2px solid rgba(138, 156, 168, 0.25) !important;
+    border-bottom: 6px double #C4D600 !important; /* Majestic double brand ribbon */
+    border-radius: 12px !important;
+    padding: 1.8rem !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    page-break-inside: avoid;
+  }
+
+  /* Set default color on parents so all nested elements print with high accessibility crispness */
+  #master-gym-printable-report,
+  #trainer-printable-report,
+  #member-printable-report-card,
+  .printable-content {
+    color: #F1F5F9 !important;
+    text-shadow: none !important;
+  }
+
+  /* Executive card widgets inside reports */
+  .bg-dark-charcoal,
+  .bg-slate-gray\/15,
+  .bg-slate-gray\/25,
+  .bg-slate-gray\/30,
+  .bg-slate-gray\/35,
+  .bg-slate-gray\/40,
+  .bg-slate-gray\/45 {
+    background: #2D3740 !important;
+    background-color: #2D3740 !important;
+    border: 1px solid rgba(138, 156, 168, 0.25) !important;
+    border-radius: 8px !important;
+  }
+
+  /* Force CSS grids to keep horizontal columns side-by-side during print, avoiding mobile vertical collapse */
+  .grid {
+    display: grid !important;
+  }
+  .grid-cols-2,
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+  .grid-cols-3,
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.2rem !important;
+  }
+  .grid-cols-4,
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  /* Luxurious Bold Titles */
+  h1, h2, h3, h4, h5, h6, strong, b {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+  }
+
+  /* Vivid Emerald and Green branded values */
+  .text-primary,
+  .text-\[\#C4D600\],
+  .text-\[\#8CA000\],
+  .text-emerald-400,
+  .text-emerald-500,
+  .text-green-500 {
+    color: #C4D600 !important; /* Energic neon-lime matching on-screen app */
+    font-weight: bold !important;
+  }
+
+  .bg-primary,
+  .bg-green-500,
+  .bg-emerald-500 {
+    background-color: #C4D600 !important;
+    background: #C4D600 !important;
+  }
+
+  /* Vivid Red warnings / Expired plans */
+  .text-rose-500,
+  .text-red-500,
+  .text-rose-400 {
+    color: #ef4444 !important; /* Visible elegant red badge */
+    font-weight: bold !important;
+  }
+
+  .bg-rose-500,
+  .bg-red-500 {
+    background-color: #ef4444 !important;
+    background: #ef4444 !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Descriptive secondary label colors */
+  .text-muted-teal,
+  .text-light-gray,
+  .text-gray-400 {
+    color: #A3B5C0 !important; /* Light-teal/gray secondary text as on screen */
+  }
+
+  /* High fidelity grid borders matching the digital style */
+  .border,
+  .border-b,
+  .border-t,
+  .border-l,
+  .border-r,
+  .border-dashed,
+  .border-muted-teal\/15,
+  .border-muted-teal\/20,
+  .border-muted-teal\/30 {
+    border-color: rgba(138, 156, 168, 0.2) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
+
+  .border-b-2 {
+    border-bottom: 2px solid rgba(138, 156, 168, 0.35) !important;
+  }
+
+  /* Table layout and grid colors */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1px solid rgba(138, 156, 168, 0.25) !important;
+    color: #F1F5F9 !important;
+  }
+
+  thead {
+    background-color: #1A2228 !important;
+    background: #1A2228 !important;
+    border-bottom: 2px solid rgba(138, 156, 168, 0.45) !important;
+  }
+
+  thead th {
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    background-color: #1A2228 !important;
+    padding: 11px 9px !important;
+  }
+
+  tbody tr {
+    background-color: #2D3740 !important;
+    background: #2D3740 !important;
+    border-bottom: 1px solid rgba(138, 156, 168, 0.15) !important;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #252E36 !important; /* Zebra stripe rows */
+    background: #252E36 !important;
+  }
+
+  th, td {
+    color: #F1F5F9 !important;
+    border-bottom: 1px solid rgba(138, 156, 168, 0.15) !important;
+    padding: 11px 9px !important;
+  }
+
+  /* 
+     Deep flat expand for all timelines, tables, grids, and scroll views 
+     This completely eliminates scroll clipping and allows tables, 
+     attendance lists, and history timelines to print flat in their entirety!
+  */
+  .max-h-52,
+  .max-h-\[52rem\],
+  .max-h-\[90vh\],
+  .overflow-y-auto,
+  div.max-h-52,
+  div.max-h-\[90vh\],
+  #member-printable-report-card,
+  .printable-content,
+  div.printable-content {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+  }
+
+  /* Prevent row splitting inside printsheets */
+  tr, td, th {
+    page-break-inside: avoid !important;
+  }
+}
